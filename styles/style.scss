@@ -53,7 +53,7 @@ body{
   font-family: "Roboto";
   color: white;
   overflow-x: hidden !important;
-  z-index: 2;
+  z-index: 100;
 }
 .pc-nav{
   display: none !important;
@@ -120,11 +120,10 @@ body{
 }
 .phone-links{
   display: block;
-  width: 100%;
+  width: 0;
   position: fixed;
   top: 0;
   height: 100vh;
-  z-index: 1;
   transform: all ease 1s;
   .overlay{
     height: 100%;
@@ -159,6 +158,7 @@ body{
 }
 .show{
   .phone-links{
+    width: 100%;
     .overlay{
       overflow: visible;
       width: 100%;

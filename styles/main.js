@@ -1,5 +1,5 @@
 const ham = document.querySelector(".hamburger")
-let links = document.querySelectorAll("a")
+let links = document.querySelectorAll(".linkk")
 const body = document.body
 
 
