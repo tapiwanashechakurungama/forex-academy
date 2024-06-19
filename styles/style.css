@@ -1,0 +1,485 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../Roboto/Roboto-Medium.ttf);
+}
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  color: white;
+  overflow-x: hidden !important;
+  z-index: 2;
+}
+
+.pc-nav {
+  display: none !important;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.links h2 {
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
+}
+.links ul {
+  display: flex;
+  gap: 30px;
+  padding-top: 1.5rem;
+}
+.links ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all ease 1.1s;
+}
+.links .btn {
+  color: white;
+  background-color: green;
+  transition: all ease 1.2s;
+  box-shadow: 0 0 0.6rem black;
+  margin-top: 1.2rem;
+}
+.links a:hover {
+  opacity: 0.6;
+}
+
+.hamburger {
+  display: block !important;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column !important;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  transition: all ease 1s;
+  cursor: pointer;
+  z-index: 2;
+}
+.hamburger .line {
+  width: 90%;
+  height: 3px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 30px;
+  transition: all ease 1s;
+  margin-right: 20px;
+}
+
+.phone-links {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  transform: all ease 1s;
+}
+.phone-links .overlay {
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  transition: all ease 1s;
+}
+.phone-links .overlay ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.phone-links .overlay ul a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.phone-links .overlay .btn {
+  background-color: green;
+  color: white;
+}
+
+.show .phone-links .overlay {
+  overflow: visible;
+  width: 100%;
+  transition: all ease 1s;
+}
+
+.rotate .none {
+  display: none;
+}
+.rotate .line1 {
+  rotate: 45deg;
+  transform: translateX(10px);
+}
+.rotate .line2 {
+  rotate: -45deg;
+  transform: translateX(10px);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/forex-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header .overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.823);
+}
+.header .overlay .container {
+  text-align: center;
+}
+.header .overlay .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.header .overlay .container h1 {
+  font-size: 4rem;
+}
+.header .overlay .container p {
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+.header .overlay .container .btn {
+  background-color: green;
+}
+
+#about .container {
+  padding-top: 5rem;
+}
+#about .container h2 {
+  font-size: 2rem;
+}
+#about .container .about-moto {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+#about .container .flex {
+  margin-top: 3rem;
+}
+#about .container .pic {
+  background-image: url(../images/forex-banner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  border-radius: 30px;
+  box-shadow: 0 0 0.6rem red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#about .container .pic .overlay-text {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.845);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#about .container .pic .overlay-text .logs {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  gap: 20px;
+}
+#about .container .pic .overlay-text .logs .log1 {
+  width: 20px;
+  height: 130px;
+  background-color: green;
+  border-radius: 20px;
+}
+#about .container .pic .overlay-text .logs .log2 {
+  width: 20px;
+  height: 100px;
+  background-color: red;
+  border-radius: 20px;
+}
+#about .container .pic .overlay-text .logs .log3 {
+  width: 20px;
+  height: 80px;
+  background-color: green;
+  border-radius: 20px;
+}
+#about .container .pic .overlay-text .logs .log4 {
+  width: 20px;
+  height: 150px;
+  background-color: red;
+  border-radius: 20px;
+}
+#about .container .green {
+  height: 30rem;
+  background-color: green;
+  box-shadow: 0 0 0.45rem white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#about .container .green h2 {
+  font-size: 2rem;
+}
+#about .container .green .rate {
+  font-size: 2.5rem;
+  color: gold;
+}
+#about .display-flex {
+  display: inline;
+  gap: 2rem;
+}
+#about .display-flex .first-blue {
+  height: 10rem;
+  background-color: rgb(49, 49, 192);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+#about .display-flex .second-grey {
+  height: 18rem;
+  background-color: grey;
+  border-radius: 30px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  margin-bottom: 2rem;
+}
+
+.services {
+  width: 100vw;
+  background-image: url(../images/overlaylady1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.services .infor {
+  background-color: rgba(0, 0, 0, 0.812);
+  width: 100%;
+  height: 100%;
+}
+.services .infor .container {
+  padding-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+.services .infor .container .text {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  padding: 30px;
+  border-left: 3px green solid;
+}
+.services .infor .container .text p {
+  line-height: 20px;
+}
+.services .infor .container .text .btn {
+  background-color: green;
+  color: white;
+  transition: all ease 2s;
+}
+.services .infor .container .text .btn:hover {
+  opacity: 0.6;
+}
+.services .infor .container h2 {
+  font-size: 1.7rem;
+}
+
+.donation {
+  height: 100vh;
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.donation h2 {
+  font-size: 2rem;
+}
+.donation .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-top: 4rem;
+}
+.donation .form input {
+  padding: 30px;
+  background-color: transparent;
+  color: black;
+  width: 90vw;
+  border: 2px green solid;
+  border-radius: 30px;
+}
+.donation .form .btn {
+  background-color: green;
+  color: white;
+  width: 10rem;
+}
+
+.footer {
+  background-color: black;
+  margin-top: 3rem;
+}
+.footer .container {
+  padding: 60px;
+}
+.footer .container .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .container h2 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+.footer .container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer .container ul a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .pc-nav {
+    display: block !important;
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: 0 0 1rem red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  .phone-nav {
+    display: none !important;
+  }
+  .phone-links {
+    display: none;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=style.css.map */
